@@ -7,7 +7,7 @@ function CurrentLayout() {
         <div class="row align-items-center my-5">
           <div class="col-lg-7">
             <button>
-              <img style={{width: 90}}
+              <img style={{width: 100}}
               class="img-fluid rounded mb-4 mb-lg-0"
               src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-mini-purple-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1617130317000"
               alt=""

@@ -6,11 +6,14 @@ function Contact() {
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-7">
-            <img
+            <button>
+               <img style={{width: 100}}
               class="img-fluid rounded mb-4 mb-lg-0"
               src="https://image.shutterstock.com/image-photo/one-ripe-red-apple-fruit-260nw-704491450.jpg"
               alt=""
             />
+            </button>
+           
           </div>
           <div class="col-lg-5">
             <h1 class="font-weight-light">Layout Design Change</h1>

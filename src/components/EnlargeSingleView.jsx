@@ -6,11 +6,14 @@ function About() {
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-7">
-            <img
+            <button>
+               <img style={{width: 100}}
               class="img-fluid rounded mb-4 mb-lg-0"
               src="https://i2.wp.com/ceklog.kindel.com/wp-content/uploads/2013/02/firefox_2018-07-10_07-50-11.png?fit=641%2C618&ssl=1"
               alt=""
             />
+            </button>
+           
           </div>
           <div class="col-lg-5">
             <h1 class="font-weight-light">Enlarge Single View</h1>
