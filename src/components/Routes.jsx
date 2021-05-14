@@ -14,12 +14,10 @@ export default class Routes extends Component {
             <Router history={history}>
                 <Switch>
                     <Route path="/
-                    
-                    
-                    " exact component={Login} />
-                    {/* <Route path="/About" component={About} />
-                    <Route path="/Contact" component={Contact} />
-                    <Route path="/Products" component={Products} /> */}
+                    " exact component={LoginPage} />
+                    <Route path="/CurrentLayout" component={CurrentLayout} />
+                    <Route path="/EnlargeSingleView" component={EnlargeSingleView} />
+                    <Route path="/LayoutDesignChange" component={LayoutDesignChange} />
                 </Switch>
             </Router>
         )
