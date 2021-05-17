@@ -6,7 +6,7 @@ import { Router, Switch, Route } from "react-router-dom";
 // import Products from "./Product/Products";
 // import Home from "./Home/Home";
 // import history from './history';
-import Login from './0_LoginPage';
+import Login from './Login';
 
 export default class Routes extends Component {
     render() {
