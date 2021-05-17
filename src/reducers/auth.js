@@ -11,7 +11,7 @@ import {
   const initialState = user
     ? { isLoggedIn: true, user }
     : { isLoggedIn: false, user: null };
-  
+  // eslint-disable-next-line
   export default function (state = initialState, action) {
     const { type, payload } = action;
   
