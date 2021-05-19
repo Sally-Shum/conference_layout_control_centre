@@ -9,14 +9,14 @@ import {
 
 export function Dropdown(props) {
   return (
-    <DropdownWrapper action={props.action}>
+    <DropdownWrapper action={props.action} onSubmit={props.onSubmit}>
       <StyledLabel htmlFor="services">
         {props.formLabel}
       </StyledLabel>
-      <StyledSelect id="services" name="services">
+      <StyledSelect id="services" name="services" onChange={props.onChange}>
         {props.children}
       </StyledSelect>
-      <StyledButton type="submit" value={props.buttonText} />
+      {/* <StyledButton type="submit" value={props.buttonText} /> */}
     </DropdownWrapper>
   );
 }

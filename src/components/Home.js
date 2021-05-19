@@ -6,14 +6,19 @@ import UserService from "../services/user.service";
 import { Dropdown, Option } from "./Dropdown";
 import { maxView, conferenceNames, images } from "./constant";
 import "./Home.scss";
-import { Formik } from 'formik';
 
 const Home = () => {
-
+  const [view, setView] = useState(maxView);
   // const [conference, setConference] = useState("");
   // const [style, setStyle] = useState("");
   // const [content, setContent] = useState("");
   const [name, setName] = useState("");
+
+  const handleSelect = (e) => {
+    console.log(e);
+    console.log(e.target.value);
+    setView(parseInt(e.target.value));
+  };
 
   // useEffect(() => {
   //   UserService.getPublicContent().then(
@@ -39,25 +44,32 @@ const choicesOfViews =  Array(maxView).fill(0);
         buttonText="Send form"
         action="/"
       >
-        {conferenceNames.map((cname) =>
-          <Option value={cname} />
+        {conferenceNames.map((cname, index) =>
+          <Option key={index} value={cname} />
         )}
       </Dropdown>
 
       <Dropdown
         formLabel="Number of View(s):"
         buttonText="Send form"
+        onChange={handleSelect}
         action="/"
+        onSubmit={e => e.preventDefault()}
+        defaultValue = "Favor"
+        value={view}
       >
-        <Option selected value="Favour" />
+        <Option value="Favor" />
         {choicesOfViews.map((value, index) =>
-          <Option value={index+1} />
+          <Option key={index} value={index+1} />
         )}
       </Dropdown>
 
-      { images.map(({id, src, title, description}) =>
-      <button>
-        <img class = "imgBtn" key={id} src={src} title={title} alt={description} />
+      <p>You selected {view} {typeof view} </p>
+      <p>{JSON.stringify(images[view - 1])}</p>
+
+      { images[view-1].map(({id, src}, index) =>
+      <button key={index}>
+        <img className = "imgBtn" src={src} alt={id} />
       </button>
       )}
 
@@ -65,8 +77,8 @@ const choicesOfViews =  Array(maxView).fill(0);
         formLabel="Save As:"
         buttonText="Save"
         action="/"
+        defaultValue="1"
       >
-        <Option selected value={1} />
         <Option value="1" />
         <Option value="2" />
         <Option value="3" />
@@ -80,6 +92,9 @@ const choicesOfViews =  Array(maxView).fill(0);
             //  onBlur={handleBlur}
             //  value={setName}
            />
+
+           <button>Save</button>
+           <button>Save and Run</button>
 
     </div>
   );
